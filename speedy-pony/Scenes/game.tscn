@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://b55axtb4pl3u1"]
+[gd_scene load_steps=8 format=4 uid="uid://b55axtb4pl3u1"]
 
 [ext_resource type="PackedScene" uid="uid://ctxdi2mam0u8b" path="res://Scenes/first_map.tscn" id="1_qxrlw"]
 [ext_resource type="Texture2D" uid="uid://bvurv86dibpa3" path="res://Assets/Sprites/Beach Tileset.png" id="2_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://c4iks2hjt1d53" path="res://Scenes/player.tscn" id="3_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://dfaw1wc4tnahr" path="res://Scenes/obstacle.tscn" id="4_3dryh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qxrlw"]
 texture = ExtResource("2_wrm1d")
@@ -450,4 +451,7 @@ position = Vector2(4, -415)
 shape = SubResource("WorldBoundaryShape2D_qxrlw")
 
 [node name="Player" parent="First-map" instance=ExtResource("3_wrm1d")]
-position = Vector2(-13, 118)
+position = Vector2(-350, 25)
+
+[node name="Obstacle" parent="First-map" instance=ExtResource("4_3dryh")]
+position = Vector2(155, -79)
