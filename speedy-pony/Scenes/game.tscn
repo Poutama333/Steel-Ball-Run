@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+[gd_scene load_steps=9 format=4 uid="uid://b55axtb4pl3u1"]
+
+[ext_resource type="PackedScene" uid="uid://ctxdi2mam0u8b" path="res://Scenes/first_map.tscn" id="1_qxrlw"]
+[ext_resource type="Texture2D" uid="uid://bvurv86dibpa3" path="res://Assets/Sprites/Beach Tileset.png" id="2_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://c4iks2hjt1d53" path="res://Scenes/player.tscn" id="3_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://ipuf70tt2cmf" path="res://Scenes/killzone.tscn" id="4_i6g32"]
+
+[sub_resource type="GDScript" id="GDScript_3dryh"]
+=======
 [gd_scene format=4 uid="uid://b55axtb4pl3u1"]
 
 [ext_resource type="PackedScene" uid="uid://ctxdi2mam0u8b" path="res://Scenes/first_map.tscn" id="1_qxrlw"]
@@ -6,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://c4iks2hjt1d53" path="res://Scenes/player.tscn" id="3_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://beuurqj5yer0r" path="res://Scenes/killzone.tscn" id="4_i6g32"]
 [ext_resource type="Texture2D" uid="uid://2fmqs8ia0mx6" path="res://Assets/icon.svg" id="6_v158k"]
+>>>>>>> 1f34f3e6b90d54945bd89f3f192b8a6114ce9a7c
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qxrlw"]
 texture = ExtResource("2_wrm1d")
@@ -420,6 +431,12 @@ sources/1 = SubResource("TileSetAtlasSource_qxrlw")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qxrlw"]
 distance = -54.0
 
+<<<<<<< HEAD
+[node name="Game" type="Node2D"]
+
+[node name="First-map" parent="." instance=ExtResource("1_qxrlw")]
+script = SubResource("GDScript_3dryh")
+=======
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h4fw4"]
 size = Vector2(67, 57.5)
 
@@ -427,6 +444,7 @@ size = Vector2(67, 57.5)
 
 [node name="First-map" parent="." unique_id=1773352663 instance=ExtResource("1_qxrlw")]
 script = ExtResource("2_i6g32")
+>>>>>>> 1f34f3e6b90d54945bd89f3f192b8a6114ce9a7c
 
 [node name="Tile-map1" type="TileMapLayer" parent="First-map" unique_id=1331608973]
 use_parent_material = true
@@ -459,6 +477,15 @@ shape = SubResource("WorldBoundaryShape2D_qxrlw")
 [node name="Player" parent="First-map" unique_id=602762073 instance=ExtResource("3_wrm1d")]
 position = Vector2(-350, 25)
 
+<<<<<<< HEAD
+[node name="Killzone" parent="First-map" instance=ExtResource("4_i6g32")]
+
+[node name="Killzone2" parent="First-map" instance=ExtResource("4_i6g32")]
+position = Vector2(-11, 92)
+
+[connection signal="area_entered" from="First-map/Killzone" to="First-map" method="_on_killzone_area_entered"]
+[connection signal="body_entered" from="First-map/Killzone" to="First-map" method="_on_killzone_body_entered"]
+=======
 [node name="Killzone" parent="First-map" unique_id=2070807351 instance=ExtResource("4_i6g32")]
 position = Vector2(-3, 44)
 
@@ -476,3 +503,4 @@ wait_time = 0.05
 one_shot = true
 
 [connection signal="timeout" from="First-map/Killzone/Timer" to="First-map/Killzone" method="_on_timer_timeout"]
+>>>>>>> 1f34f3e6b90d54945bd89f3f192b8a6114ce9a7c
