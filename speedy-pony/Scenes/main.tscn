@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dgwjnf8r2mb6x"]
+
+[ext_resource type="Script" uid="uid://cffqwg6lxjdi5" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://d3jvkkophbwjx" path="res://Scenes/hud.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://d3dhv345okcmv" path="res://Scenes/stopwatch.tscn" id="3_1bvp3"]
+
+[node name="Main" type="Node2D" unique_id=1385118629]
+script = ExtResource("1_ig7tw")
+
+[node name="Timer" type="Timer" parent="." unique_id=1612205792]
+process_callback = 0
+one_shot = true
+
+[node name="HUD" parent="." unique_id=500307470 instance=ExtResource("2_h2yge")]
+
+[node name="Stopwatch" parent="." unique_id=1286277884 instance=ExtResource("3_1bvp3")]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
