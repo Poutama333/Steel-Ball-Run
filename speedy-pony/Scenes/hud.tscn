@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://d3jvkkophbwjx"]
+
+[ext_resource type="Script" uid="uid://dk7hjemu2pd22" path="res://Scenes/hud.gd" id="1_e0onf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hani8"]
+
+[node name="HUD" type="Control" unique_id=500307470 node_paths=PackedStringArray("stopwatch_label")]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e0onf")
+stopwatch_label = NodePath("StopwatchLable")
+
+[node name="StopwatchLable" type="Label" parent="." unique_id=1653938585]
+layout_mode = 1
+offset_right = 110.0
+offset_bottom = 48.0
+text = " 00:00:000"
+label_settings = SubResource("LabelSettings_hani8")
+vertical_alignment = 1
