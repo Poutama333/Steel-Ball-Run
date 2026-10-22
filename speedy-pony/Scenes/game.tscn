@@ -1,11 +1,11 @@
-[gd_scene load_steps=11 format=4 uid="uid://b55axtb4pl3u1"]
+[gd_scene load_steps=9 format=4 uid="uid://b55axtb4pl3u1"]
 
 [ext_resource type="PackedScene" uid="uid://ctxdi2mam0u8b" path="res://Scenes/first_map.tscn" id="1_qxrlw"]
-[ext_resource type="Script" uid="uid://dromkq4isiyqj" path="res://Scenes/killzone.gd" id="2_i6g32"]
-[ext_resource type="Texture2D" uid="uid://cgtm02tdi2div" path="res://Assets/Sprites/Beach Tileset.png" id="2_wrm1d"]
+[ext_resource type="Texture2D" uid="uid://bvurv86dibpa3" path="res://Assets/Sprites/Beach Tileset.png" id="2_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://c4iks2hjt1d53" path="res://Scenes/player.tscn" id="3_wrm1d"]
-[ext_resource type="PackedScene" uid="uid://beuurqj5yer0r" path="res://Scenes/killzone.tscn" id="4_i6g32"]
-[ext_resource type="Texture2D" uid="uid://c26e803tdbt54" path="res://Assets/icon.svg" id="6_v158k"]
+[ext_resource type="PackedScene" uid="uid://ipuf70tt2cmf" path="res://Scenes/killzone.tscn" id="4_i6g32"]
+
+[sub_resource type="GDScript" id="GDScript_3dryh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qxrlw"]
 texture = ExtResource("2_wrm1d")
@@ -420,13 +420,10 @@ sources/1 = SubResource("TileSetAtlasSource_qxrlw")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qxrlw"]
 distance = -54.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4fw4"]
-size = Vector2(67, 57.5)
-
 [node name="Game" type="Node2D"]
 
 [node name="First-map" parent="." instance=ExtResource("1_qxrlw")]
-script = ExtResource("2_i6g32")
+script = SubResource("GDScript_3dryh")
 
 [node name="Tile-map1" type="TileMapLayer" parent="First-map"]
 use_parent_material = true
@@ -460,19 +457,9 @@ shape = SubResource("WorldBoundaryShape2D_qxrlw")
 position = Vector2(-350, 25)
 
 [node name="Killzone" parent="First-map" instance=ExtResource("4_i6g32")]
-position = Vector2(-3, 44)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="First-map/Killzone"]
-position = Vector2(98, 6)
-shape = SubResource("RectangleShape2D_h4fw4")
+[node name="Killzone2" parent="First-map" instance=ExtResource("4_i6g32")]
+position = Vector2(-11, 92)
 
-[node name="Sprite2D" type="Sprite2D" parent="First-map/Killzone"]
-position = Vector2(95, 7)
-scale = Vector2(0.570313, 0.484375)
-texture = ExtResource("6_v158k")
-
-[node name="Timer" type="Timer" parent="First-map/Killzone"]
-wait_time = 0.05
-one_shot = true
-
-[connection signal="timeout" from="First-map/Killzone/Timer" to="First-map/Killzone" method="_on_timer_timeout"]
+[connection signal="area_entered" from="First-map/Killzone" to="First-map" method="_on_killzone_area_entered"]
+[connection signal="body_entered" from="First-map/Killzone" to="First-map" method="_on_killzone_body_entered"]
