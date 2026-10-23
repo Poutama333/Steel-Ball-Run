@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ipuf70tt2cmf"]
 
-[ext_resource type="Script" uid="uid://fa0n8iq0u15n" path="res://killzone.gd" id="1_iyfga"]
+[ext_resource type="Script" uid="uid://fa0n8iq0u15n" path="res://Scenes/killzone.gd" id="1_iyfga"]
 [ext_resource type="Texture2D" uid="uid://d18l5vknw3432" path="res://Assets/icon.svg" id="2_ca4vh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_on6up"]
