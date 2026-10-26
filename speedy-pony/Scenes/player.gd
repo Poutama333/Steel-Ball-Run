@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	velocity = Vector2()
 	
 	var speed = 250
