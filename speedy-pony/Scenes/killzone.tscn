@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ipuf70tt2cmf"]
+[gd_scene format=3 uid="uid://ipuf70tt2cmf"]
 
-[ext_resource type="Script" uid="uid://fa0n8iq0u15n" path="res://Scenes/killzone.gd" id="1_iyfga"]
-[ext_resource type="Texture2D" uid="uid://c26e803tdbt54" path="res://Assets/icon.svg" id="2_ca4vh"]
+[ext_resource type="Script" uid="uid://fa0n8iq0u15n" path="res://Scripts/killzone.gd" id="1_iyfga"]
+[ext_resource type="Texture2D" uid="uid://2fmqs8ia0mx6" path="res://Assets/icon.svg" id="2_ca4vh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_on6up"]
 size = Vector2(73, 74)
