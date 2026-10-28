@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://d1nscsktj0s7j"]
+[gd_scene load_steps=2 format=3 uid="uid://dijmpl20uex2e"]
 
 [sub_resource type="GDScript" id="GDScript_lwau0"]
 script/source = "extends Node
@@ -24,5 +24,5 @@ func get_time_formatted():
 	return \"%02d:%02d.%02d\" % [minutes, seconds, milliseconds]
 "
 
-[node name="stopwatch" type="Node" unique_id=296108859 groups=["stopwatch"]]
+[node name="stopwatch" type="Node" groups=["stopwatch"]]
 script = SubResource("GDScript_lwau0")

@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://di25yi4s5moq4"]
+
+[ext_resource type="Script" uid="uid://ctighsmg2axf" path="res://Scripts/stopwatch.gd" id="1_cgmvo"]
+[ext_resource type="FontFile" uid="uid://dxl786bow8tff" path="res://Assets/Fonts/Kenney Pixel.ttf" id="2_vh8u0"]
+
+[node name="stopwatch" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_cgmvo")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.575
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 1.0
+offset_bottom = 2.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_vh8u0")
+theme_override_font_sizes/font_size = 100
+text = "00:00"
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

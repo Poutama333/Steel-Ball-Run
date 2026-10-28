@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://b55axtb4pl3u1"]
+[gd_scene load_steps=2 format=3 uid="uid://b55axtb4pl3u1"]
 
 [ext_resource type="PackedScene" uid="uid://ctxdi2mam0u8b" path="res://Scenes/first_map.tscn" id="1_qxrlw"]
 
-[node name="Game" type="Node2D" unique_id=2131459035]
+[node name="Game" type="Node2D"]
 
-[node name="first_map" parent="." unique_id=664515187 instance=ExtResource("1_qxrlw")]
+[node name="first_map" parent="." instance=ExtResource("1_qxrlw")]
