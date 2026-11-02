@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://d0fake1vytdvn"]
+[gd_scene load_steps=3 format=3 uid="uid://d0fake1vytdvn"]
 
 [ext_resource type="Script" uid="uid://bhwdkglgm6xkp" path="res://Scripts/gameoverui.gd" id="1_uv4py"]
+[ext_resource type="FontFile" uid="uid://cjdjooif0b0b7" path="res://Assets/Fonts/Kenney Mini Square.ttf" id="2_hpeos"]
 
 [node name="gameoverui" type="CanvasLayer"]
 process_mode = 3
@@ -8,15 +9,45 @@ visible = false
 script = ExtResource("1_uv4py")
 
 [node name="Panel" type="Panel" parent="."]
-offset_right = 1159.0
-offset_bottom = 653.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -909.0
+offset_top = -585.5
+offset_right = 909.0
+offset_bottom = 585.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
 
 [node name="Button" type="Button" parent="Panel"]
-layout_mode = 0
-offset_left = 512.0
-offset_top = 327.0
-offset_right = 618.0
-offset_bottom = 367.0
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -53.0
+offset_top = -20.0
+offset_right = 53.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_hpeos")
 text = "Replay"
+
+[node name="Label" type="Label" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 740.0
+offset_top = 454.5
+offset_right = 804.0
+offset_bottom = 477.5
+scale = Vector2(5.17513, 5.22323)
+theme_override_fonts/font = ExtResource("2_hpeos")
+text = "Victory"
 
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://ipuf70tt2cmf"]
 
 [ext_resource type="Script" uid="uid://fa0n8iq0u15n" path="res://Scripts/killzone.gd" id="1_iyfga"]
-[ext_resource type="Texture2D" uid="uid://bbnulxh4jwojj" path="res://Assets/Sprites/pixil-frame-0 (3).png" id="2_iyfga"]
+[ext_resource type="Texture2D" uid="uid://bbnulxh4jwojj" path="res://Assets/Sprites/cactus.png" id="2_iyfga"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_on6up"]
-size = Vector2(58, 72)
+size = Vector2(55, 69)
 
 [node name="Killzone" type="Area2D"]
 collision_layer = 2
@@ -12,7 +12,7 @@ script = ExtResource("1_iyfga")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 texture_filter = 1
-position = Vector2(41, 39)
+position = Vector2(40.5, 38.5)
 shape = SubResource("RectangleShape2D_on6up")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
