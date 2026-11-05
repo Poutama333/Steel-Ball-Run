@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0fake1vytdvn"]
+[gd_scene load_steps=4 format=3 uid="uid://d0fake1vytdvn"]
 
 [ext_resource type="Script" uid="uid://bhwdkglgm6xkp" path="res://Scripts/gameoverui.gd" id="1_uv4py"]
 [ext_resource type="FontFile" uid="uid://cjdjooif0b0b7" path="res://Assets/Fonts/Kenney Mini Square.ttf" id="2_hpeos"]
+[ext_resource type="Script" uid="uid://cvmd43jygjcu2" path="res://Scripts/change_scene.gd" id="3_lf8ii"]
 
 [node name="gameoverui" type="CanvasLayer"]
 process_mode = 3
@@ -50,4 +51,16 @@ scale = Vector2(5.17513, 5.22323)
 theme_override_fonts/font = ExtResource("2_hpeos")
 text = "Victory"
 
+[node name="Change_scene" type="Button" parent="Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 856.0
+offset_top = 609.5
+offset_right = 962.0
+offset_bottom = 648.5
+theme_override_fonts/font = ExtResource("2_hpeos")
+text = "Next Level"
+script = ExtResource("3_lf8ii")
+
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Panel/Change_scene" to="." method="_on_change_scene_pressed"]

@@ -1,21 +1,22 @@
 [gd_scene load_steps=4 format=3 uid="uid://dwd6tiwwukeki"]
 
 [ext_resource type="Script" uid="uid://cmmurdiw2q5b4" path="res://Scripts/moving_killzone.gd" id="1_35mci"]
-[ext_resource type="Texture2D" uid="uid://c26e803tdbt54" path="res://Assets/icon.svg" id="1_45lhs"]
+[ext_resource type="Texture2D" uid="uid://bn6gsbhmix155" path="res://Assets/Sprites/Spike.png" id="2_35mci"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_35mci"]
-size = Vector2(70, 66)
+size = Vector2(56, 34)
 
 [node name="Moving_killzone" type="Area2D"]
 script = ExtResource("1_35mci")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-23.5, 34.5)
-scale = Vector2(0.554688, 0.507813)
-texture = ExtResource("1_45lhs")
+texture_filter = 1
+position = Vector2(-23, 75)
+scale = Vector2(3.94922, 2.80078)
+texture = ExtResource("2_35mci")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-24, 34)
+position = Vector2(-35, 61)
 shape = SubResource("RectangleShape2D_35mci")
 
 [node name="Timer" type="Timer" parent="."]

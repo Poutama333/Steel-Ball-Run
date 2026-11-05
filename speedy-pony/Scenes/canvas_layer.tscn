@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgtk3puhlp4sl"]
+
+[ext_resource type="FontFile" uid="uid://cjdjooif0b0b7" path="res://Assets/Fonts/Kenney Mini Square.ttf" id="1_5oaki"]
+
+[node name="UI_ish" type="CanvasLayer"]
+
+[node name="Level" type="Label" parent="."]
+texture_filter = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -256.5
+offset_right = 256.5
+offset_bottom = 253.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_5oaki")
+theme_override_font_sizes/font_size = 100
+text = "Level One
+"
