@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ctighsmg2axf" path="res://Scripts/stopwatch.gd" id="1_cgmvo"]
 [ext_resource type="FontFile" uid="uid://dxl786bow8tff" path="res://Assets/Fonts/Kenney Pixel.ttf" id="2_vh8u0"]
 
-[node name="stopwatch" type="Control"]
+[node name="Stopwatch" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0

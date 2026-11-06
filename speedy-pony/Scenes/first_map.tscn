@@ -1,4 +1,5 @@
 [gd_scene format=4 uid="uid://ctxdi2mam0u8b"]
+[gd_scene load_steps=12 format=4 uid="uid://ctxdi2mam0u8b"]
 
 [ext_resource type="Texture2D" uid="uid://biy4fiyuwh2tc" path="res://Assets/Sprites/Beach Tileset.png" id="1_eo13d"]
 [ext_resource type="PackedScene" uid="uid://c4iks2hjt1d53" path="res://Scenes/player.tscn" id="2_1kql3"]
@@ -7,6 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://di25yi4s5moq4" path="res://Scenes/control.tscn" id="5_l24fp"]
 [ext_resource type="PackedScene" uid="uid://d0fake1vytdvn" path="res://Scenes/gameoverui.tscn" id="5_p737u"]
 [ext_resource type="Texture2D" uid="uid://dx1yhhlnjyjkf" path="res://Assets/Sprites/sr23ecaeee86b12.png" id="7_sphg0"]
+[ext_resource type="Texture2D" uid="uid://ck8tgeone540j" path="res://Assets/Sprites/sr23ecaeee86b12.png" id="7_sphg0"]
+[ext_resource type="PackedScene" uid="uid://cgtk3puhlp4sl" path="res://Scenes/canvas_layer.tscn" id="8_67wpx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p737u"]
 texture = ExtResource("1_eo13d")
@@ -475,55 +478,56 @@ scale = Vector2(0.606812, 0.553476)
 
 [node name="game_over_ui" parent="." unique_id=1507913050 instance=ExtResource("5_p737u")]
 
-[node name="Cactuses" type="Node" parent="." unique_id=808400339]
+[node name="Obstacles" type="Node" parent="."]
 
-[node name="Killzone6" parent="Cactuses" unique_id=1376086860 instance=ExtResource("3_l24fp")]
+[node name="Killzone6" parent="Obstacles" instance=ExtResource("3_l24fp")]
 position = Vector2(349, 84)
 
-[node name="Killzone5" parent="Cactuses" unique_id=1487368228 instance=ExtResource("3_l24fp")]
+[node name="Killzone5" parent="Obstacles" instance=ExtResource("3_l24fp")]
 position = Vector2(603, 127)
 
-[node name="Killzone4" parent="Cactuses" unique_id=1966149179 instance=ExtResource("3_l24fp")]
+[node name="Killzone4" parent="Obstacles" instance=ExtResource("3_l24fp")]
 position = Vector2(626, -54)
 
-[node name="Killzone" parent="Cactuses" unique_id=1210984414 instance=ExtResource("3_l24fp")]
+[node name="Killzone" parent="Obstacles" instance=ExtResource("3_l24fp")]
 position = Vector2(52, 78)
 scale = Vector2(0.913092, 0.878494)
 
-[node name="Killzone2" parent="Cactuses" unique_id=1672081956 instance=ExtResource("3_l24fp")]
+[node name="Killzone2" parent="Obstacles" instance=ExtResource("3_l24fp")]
 position = Vector2(199, -51)
 scale = Vector2(0.916364, 0.910575)
 
-[node name="Killzone3" parent="Cactuses" unique_id=1832068981 instance=ExtResource("3_l24fp")]
+[node name="Killzone3" parent="Obstacles" instance=ExtResource("3_l24fp")]
 position = Vector2(263, 206)
 
-[node name="Killzone7" parent="Cactuses" unique_id=745219502 instance=ExtResource("3_l24fp")]
+[node name="Killzone7" parent="Obstacles" instance=ExtResource("3_l24fp")]
 position = Vector2(1037, -119)
 
-[node name="Killzone8" parent="Cactuses" unique_id=369981516 instance=ExtResource("3_l24fp")]
+[node name="Killzone8" parent="Obstacles" instance=ExtResource("3_l24fp")]
 position = Vector2(1035, -48)
 
-[node name="Killzone9" parent="Cactuses" unique_id=2116881157 instance=ExtResource("3_l24fp")]
+[node name="Killzone9" parent="Obstacles" instance=ExtResource("3_l24fp")]
 position = Vector2(1235, 77)
 
-[node name="Killzone10" parent="Cactuses" unique_id=1183517228 instance=ExtResource("3_l24fp")]
+[node name="Killzone10" parent="Obstacles" instance=ExtResource("3_l24fp")]
 position = Vector2(883, 75)
 
-[node name="Killzone11" parent="Cactuses" unique_id=2081522719 instance=ExtResource("3_l24fp")]
+[node name="Killzone11" parent="Obstacles" instance=ExtResource("3_l24fp")]
 position = Vector2(1393, 15)
 
-[node name="Killzone12" parent="Cactuses" unique_id=703193581 instance=ExtResource("3_l24fp")]
+[node name="Killzone12" parent="Obstacles" instance=ExtResource("3_l24fp")]
 position = Vector2(1059, 208)
 
-[node name="Killzone13" parent="Cactuses" unique_id=1508835888 instance=ExtResource("3_l24fp")]
+[node name="Killzone13" parent="Obstacles" instance=ExtResource("3_l24fp")]
 position = Vector2(1563, 144)
 
-[node name="Killzone14" parent="Cactuses" unique_id=1506432360 instance=ExtResource("3_l24fp")]
+[node name="Killzone14" parent="Obstacles" instance=ExtResource("3_l24fp")]
 position = Vector2(1582, -116)
 
-[node name="Background" type="Sprite2D" parent="." unique_id=1528979414]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -100
-texture_filter = 1
-position = Vector2(743, 291)
-scale = Vector2(3.06359, 1.29302)
+position = Vector2(563, 359)
+scale = Vector2(3.59299, 1.66051)
 texture = ExtResource("7_sphg0")
+
+[node name="UI_ish" parent="." instance=ExtResource("8_67wpx")]
