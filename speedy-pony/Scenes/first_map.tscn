@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://ctxdi2mam0u8b"]
+[gd_scene format=4 uid="uid://ctxdi2mam0u8b"]
 
 [ext_resource type="Texture2D" uid="uid://biy4fiyuwh2tc" path="res://Assets/Sprites/Beach Tileset.png" id="1_eo13d"]
 [ext_resource type="PackedScene" uid="uid://c4iks2hjt1d53" path="res://Scenes/player.tscn" id="2_1kql3"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://di25yi4s5moq4" path="res://Scenes/control.tscn" id="5_l24fp"]
 [ext_resource type="PackedScene" uid="uid://d0fake1vytdvn" path="res://Scenes/gameoverui.tscn" id="5_p737u"]
 [ext_resource type="Texture2D" uid="uid://dx1yhhlnjyjkf" path="res://Assets/Sprites/sr23ecaeee86b12.png" id="7_sphg0"]
-[ext_resource type="Texture2D" uid="uid://ck8tgeone540j" path="res://Assets/Sprites/sr23ecaeee86b12.png" id="7_sphg0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p737u"]
 texture = ExtResource("1_eo13d")
@@ -476,53 +475,53 @@ scale = Vector2(0.606812, 0.553476)
 
 [node name="game_over_ui" parent="." unique_id=1507913050 instance=ExtResource("5_p737u")]
 
-[node name="Cactuses" type="Node" parent="."]
+[node name="Cactuses" type="Node" parent="." unique_id=1905858499]
 
-[node name="Killzone6" parent="Cactuses" instance=ExtResource("3_l24fp")]
+[node name="Killzone6" parent="Cactuses" unique_id=879495423 instance=ExtResource("3_l24fp")]
 position = Vector2(349, 84)
 
-[node name="Killzone5" parent="Cactuses" instance=ExtResource("3_l24fp")]
+[node name="Killzone5" parent="Cactuses" unique_id=1564267204 instance=ExtResource("3_l24fp")]
 position = Vector2(603, 127)
 
-[node name="Killzone4" parent="Cactuses" instance=ExtResource("3_l24fp")]
+[node name="Killzone4" parent="Cactuses" unique_id=1197919183 instance=ExtResource("3_l24fp")]
 position = Vector2(626, -54)
 
-[node name="Killzone" parent="Cactuses" instance=ExtResource("3_l24fp")]
+[node name="Killzone" parent="Cactuses" unique_id=1255791436 instance=ExtResource("3_l24fp")]
 position = Vector2(52, 78)
 scale = Vector2(0.913092, 0.878494)
 
-[node name="Killzone2" parent="Cactuses" instance=ExtResource("3_l24fp")]
+[node name="Killzone2" parent="Cactuses" unique_id=694130052 instance=ExtResource("3_l24fp")]
 position = Vector2(199, -51)
 scale = Vector2(0.916364, 0.910575)
 
-[node name="Killzone3" parent="Cactuses" instance=ExtResource("3_l24fp")]
+[node name="Killzone3" parent="Cactuses" unique_id=1869617195 instance=ExtResource("3_l24fp")]
 position = Vector2(263, 206)
 
-[node name="Killzone7" parent="Cactuses" instance=ExtResource("3_l24fp")]
+[node name="Killzone7" parent="Cactuses" unique_id=1787459836 instance=ExtResource("3_l24fp")]
 position = Vector2(1037, -119)
 
-[node name="Killzone8" parent="Cactuses" instance=ExtResource("3_l24fp")]
+[node name="Killzone8" parent="Cactuses" unique_id=1718848072 instance=ExtResource("3_l24fp")]
 position = Vector2(1035, -48)
 
-[node name="Killzone9" parent="Cactuses" instance=ExtResource("3_l24fp")]
+[node name="Killzone9" parent="Cactuses" unique_id=1085564477 instance=ExtResource("3_l24fp")]
 position = Vector2(1235, 77)
 
-[node name="Killzone10" parent="Cactuses" instance=ExtResource("3_l24fp")]
+[node name="Killzone10" parent="Cactuses" unique_id=1643020603 instance=ExtResource("3_l24fp")]
 position = Vector2(883, 75)
 
-[node name="Killzone11" parent="Cactuses" instance=ExtResource("3_l24fp")]
+[node name="Killzone11" parent="Cactuses" unique_id=230187118 instance=ExtResource("3_l24fp")]
 position = Vector2(1393, 15)
 
-[node name="Killzone12" parent="Cactuses" instance=ExtResource("3_l24fp")]
+[node name="Killzone12" parent="Cactuses" unique_id=330939601 instance=ExtResource("3_l24fp")]
 position = Vector2(1059, 208)
 
-[node name="Killzone13" parent="Cactuses" instance=ExtResource("3_l24fp")]
+[node name="Killzone13" parent="Cactuses" unique_id=808003230 instance=ExtResource("3_l24fp")]
 position = Vector2(1563, 144)
 
-[node name="Killzone14" parent="Cactuses" instance=ExtResource("3_l24fp")]
+[node name="Killzone14" parent="Cactuses" unique_id=988417171 instance=ExtResource("3_l24fp")]
 position = Vector2(1582, -116)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=58272418]
 z_index = -100
 position = Vector2(563, 359)
 scale = Vector2(3.59299, 1.66051)
